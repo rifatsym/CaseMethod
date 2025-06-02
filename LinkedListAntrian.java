@@ -17,12 +17,11 @@ public class LinkedListAntrian {
             rear.next = baru;
             rear = baru;
         }
-        System.out.println(">> Kendaraan masuk ke dalam antrian.");
     }
 
     public NodeKendaraan panggilAntrian() {
         if (isEmpty()) {
-            System.out.println("Antrian kosong.");
+            System.out.println(">> Antrian kosong.");
             return null;
         }
         NodeKendaraan temp = front;
@@ -32,19 +31,16 @@ public class LinkedListAntrian {
     }
 
     public void tampilkanAntrian() {
-        System.out.println("-- Antrian Kendaraan --");
         if (isEmpty()) {
-            System.out.println("Antrian kosong.");
+            System.out.println(">> Antrian kosong.");
             return;
         }
-        System.out.println("Antrian Kendaraan:");
+        System.out.println("-- Daftar Antrian Kendaraan --");
         NodeKendaraan current = front;
+        int nomor = 1;
         while (current != null) {
-            System.out.println("Plat Nomor: " + current.nomorPlat);
-            System.out.println("Tipe: " + current.jenisKendaraan);
-            System.out.println("Merk: " + current.merk);
+            System.out.println(nomor++ + ". Plat: " + current.nomorPlat + ", Jenis: " + current.jenisKendaraan + ", Merk: " + current.merk);
             current = current.next;
-            if (current != null) System.out.println();
         }
     }
 

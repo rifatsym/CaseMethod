@@ -16,7 +16,7 @@ public class Main {
             System.out.println("0. Keluar");
             System.out.print("Pilih: ");
             pilihan = sc.nextInt();
-            sc.nextLine(); // konsumsi newline
+            sc.nextLine(); 
 
             switch (pilihan) {
                 case 1:
@@ -26,10 +26,8 @@ public class Main {
                     String jenis = sc.nextLine();
                     System.out.print("Masukkan Merk: ");
                     String merk = sc.nextLine();
-                    System.out.print("Masukkan Jumlah liter: ");
-                    int liter = sc.nextInt();
-                    sc.nextLine(); // konsumsi newline
-                    spbu.antrian.tambahAntrian(plat, jenis, liter);
+                    spbu.antrian.tambahAntrian(plat, jenis, merk, 0); 
+                    System.out.println(">> Kendaraan masuk ke dalam antrian.");
                     break;
 
                 case 2:
@@ -50,7 +48,7 @@ public class Main {
                         int harga = sc.nextInt();
                         System.out.print("Masukkan Jumlah liter: ");
                         int jumlahLiter = sc.nextInt();
-                        sc.nextLine(); // konsumsi newline
+                        sc.nextLine(); 
                         Transaksi t = new Transaksi(dipanggil.nomorPlat, jenisBBM, jumlahLiter, harga);
                         spbu.transaksiQueue.enqueue(t);
                         System.out.println(">> Transaksi berhasil dicatat.");
