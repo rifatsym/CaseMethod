@@ -7,6 +7,7 @@ public class Main {
         int pilihan;
 
         do {
+            System.out.println("");
             System.out.println("\n--- Menu SPBU ---");
             System.out.println("1. Tambah Antrian Kendaraan");
             System.out.println("2. Tampilkan Antrian");
