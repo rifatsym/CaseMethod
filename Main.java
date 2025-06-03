@@ -26,10 +26,7 @@ public class Main {
                     String jenis = sc.nextLine();
                     System.out.print("Masukkan Merk: ");
                     String merk = sc.nextLine();
-                    System.out.print("Masukkan Jumlah liter: ");
-                    int liter = sc.nextInt();
-                    sc.nextLine(); // konsumsi newline
-                    spbu.antrian.tambahAntrian(plat, jenis, liter);
+                    spbu.antrian.tambahAntrian(plat, jenis, merk);
                     break;
 
                 case 2:

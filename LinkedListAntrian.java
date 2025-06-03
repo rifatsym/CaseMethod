@@ -9,8 +9,8 @@ public class LinkedListAntrian {
         return front == null;
     }
 
-    public void tambahAntrian(String plat, String jenis, String merk, int liter) {
-        NodeKendaraan baru = new NodeKendaraan(plat, jenis, merk, liter);
+    public void tambahAntrian(String plat, String jenis, String merk) {
+        NodeKendaraan baru = new NodeKendaraan(plat, jenis, merk);
         if (isEmpty()) {
             front = rear = baru;
         } else {
