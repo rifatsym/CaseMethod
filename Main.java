@@ -27,6 +27,7 @@ public class Main {
                     System.out.print("Masukkan Merk: ");
                     String merk = sc.nextLine();
                     spbu.antrian.tambahAntrian(plat, jenis, merk);
+                    System.out.println(">> Kendaraan masuk ke dalam antrian.");
                     break;
 
                 case 2:
