@@ -17,7 +17,6 @@ public class LinkedListAntrian {
             rear.next = baru;
             rear = baru;
         }
-        System.out.println(">> Kendaraan masuk ke dalam antrian.");
     }
 
     public NodeKendaraan panggilAntrian() {

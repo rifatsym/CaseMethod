@@ -37,5 +37,6 @@ public class QueueTransaksi {
             int index = (front + i) % capacity;
             System.out.println(transaksiQueue[index].nomorPlat + ": Rp " + (double)transaksiQueue[index].totalBayar);
         }
+        System.out.println("Jumlah Transaksi yang diproses: " + size);
     }
 }
