@@ -1,9 +1,9 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Main {
+public class Main11 {
     public static void main(String[] args) {
-        SPBU spbu = new SPBU();
+        SPBU11 spbu = new SPBU11();
         Scanner sc = new Scanner(System.in);
         int pilihan = -1;
 
@@ -42,7 +42,7 @@ public class Main {
                         break;
 
                     case 4:
-                        NodeKendaraan dipanggil = spbu.antrian.panggilAntrian();
+                        NodeKendaraan11 dipanggil = spbu.antrian.panggilAntrian();
                         if (dipanggil != null) {
                             System.out.println("Petugas melayani " + dipanggil.nomorPlat);
                             System.out.print("Masukkan Jenis BBM: ");
@@ -52,7 +52,7 @@ public class Main {
                             System.out.print("Masukkan Jumlah liter: ");
                             int jumlahLiter = sc.nextInt();
                             sc.nextLine();
-                            Transaksi t = new Transaksi(dipanggil.nomorPlat, jenisBBM, jumlahLiter, harga);
+                            Transaksi11 t = new Transaksi11(dipanggil.nomorPlat, jenisBBM, jumlahLiter, harga);
                             spbu.transaksiQueue.enqueue(t);
                             System.out.println(">> Transaksi berhasil dicatat.");
                         }

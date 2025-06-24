@@ -1,7 +1,7 @@
-public class LinkedListAntrian {
-    NodeKendaraan front, rear;
+public class LinkedListAntrian11 {
+    NodeKendaraan11 front, rear;
 
-    public LinkedListAntrian() {
+    public LinkedListAntrian11() {
         front = rear = null;
     }
 
@@ -10,7 +10,7 @@ public class LinkedListAntrian {
     }
 
     public void tambahAntrian(String plat, String jenis, String merk) {
-        NodeKendaraan baru = new NodeKendaraan(plat, jenis, merk);
+        NodeKendaraan11 baru = new NodeKendaraan11(plat, jenis, merk);
         if (isEmpty()) {
             front = rear = baru;
         } else {
@@ -19,12 +19,12 @@ public class LinkedListAntrian {
         }
     }
 
-    public NodeKendaraan panggilAntrian() {
+    public NodeKendaraan11 panggilAntrian() {
         if (isEmpty()) {
             System.out.println("Antrian kosong.");
             return null;
         }
-        NodeKendaraan temp = front;
+        NodeKendaraan11 temp = front;
         front = front.next;
         if (front == null) rear = null;
         return temp;
@@ -37,7 +37,7 @@ public class LinkedListAntrian {
             return;
         }
         System.out.println("Antrian Kendaraan:");
-        NodeKendaraan current = front;
+        NodeKendaraan11 current = front;
         while (current != null) {
             System.out.println("Plat Nomor: " + current.nomorPlat);
             System.out.println("Tipe: " + current.jenisKendaraan);
@@ -49,7 +49,7 @@ public class LinkedListAntrian {
 
     public int hitungAntrian() {
         int count = 0;
-        NodeKendaraan current = front;
+        NodeKendaraan11 current = front;
         while (current != null) {
             count++;
             current = current.next;
